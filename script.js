@@ -1,20 +1,23 @@
 let element;
 const array = [];
 
-function compareNumeric(a, b) {
-  return a - b;
-}
-
 do {
-    element = prompt('Введіть декілька значень.');
+    element = prompt('Введіть декілька значень.');    
     
     if (element) {
-        array.push(element);
-        array.sort(compareNumeric)
+        array.push(element);        
+        console.log(array)
     }
 
 } while (element !== null);
 
-array.splice(2, 3)
+function compareNumeric(a, b) {
+  return a - b;
+}
+console.log('Масив після сортування:')
+array.sort(compareNumeric)
+console.log(array)
 
-document.write(array)
+console.log('Масив після видалення елементів з 2 по 4 включно:')
+array.splice(2, 3)
+console.log(array)
